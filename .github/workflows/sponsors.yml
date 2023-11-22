@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'sponsorkit.config.ts'
+    paths-ignore:
+      - "**.md"
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:

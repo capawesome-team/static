@@ -1,38 +1,48 @@
 import { BadgePreset, Sponsorship, defineConfig, presets } from 'sponsorkit'
 
-const SPONSORSHIP_APP_SCREENS: Sponsorship = {
-  monthlyDollars: 300,
-  sponsor: {
-    avatarUrl: 'https://images.opencollective.com/appscreens/62776aa/avatar/256.png?height=256',
-    login: 'appscreens',
-    name: 'AppScreens',
-    type: 'Organization',
-    websiteUrl: 'https://appscreens.com/?_locale=en&utm_source=github&utm_medium=referral&utm_campaign=capawesome&gclid=capawesome',
+const OC_SPONSORSHIPS: Sponsorship[] = [
+  {
+    monthlyDollars: 300,
+    sponsor: {
+      avatarUrl: 'https://images.opencollective.com/appscreens/62776aa/avatar/256.png?height=256',
+      login: 'appscreens',
+      name: 'AppScreens',
+      type: 'Organization',
+      websiteUrl: 'https://appscreens.com/?_locale=en&utm_source=github&utm_medium=referral&utm_campaign=capawesome&gclid=capawesome',
+    },
+    isOneTime: false,
   },
-  isOneTime: false,
-}
-
-const SPONSORSHIP_NFC21: Sponsorship = {
-  monthlyDollars: 50,
-  sponsor: {
-    avatarUrl: 'https://images.opencollective.com/nfc21/9d1232a/logo/256.png?height=256',
-    login: 'nfc21',
-    name: 'NFC 21',
-    type: 'Organization',
+  {
+    monthlyDollars: 50,
+    sponsor: {
+      avatarUrl: 'https://images.opencollective.com/nfc21/9d1232a/logo/256.png?height=256',
+      login: 'nfc21',
+      name: 'NFC 21',
+      type: 'Organization',
+    },
+    isOneTime: false
   },
-  isOneTime: false
-}
-
-const SPONSORSHIP_ERIK_GEERS: Sponsorship = {
-  monthlyDollars: 50,
-  sponsor: {
-    avatarUrl: 'https://images.opencollective.com/erik-geers/avatar/256.png?height=256',
-    login: 'erikgeers',
-    name: 'Erik Geers',
-    type: 'User',
+  {
+    monthlyDollars: 50,
+    sponsor: {
+      avatarUrl: 'https://images.opencollective.com/erik-geers/avatar/256.png?height=256',
+      login: 'erikgeers',
+      name: 'Erik Geers',
+      type: 'User',
+    },
+    isOneTime: false
   },
-  isOneTime: false
-}
+  {
+    monthlyDollars: 500,
+    sponsor: {
+      avatarUrl: 'https://images.opencollective.com/colorful-casting/4e2c691/logo/256.png?height=256',
+      login: 'colorful-casting',
+      name: 'Colorful Casting',
+      type: 'Organization',
+    },
+    isOneTime: false
+  }
+]
 
 const pastPreset: BadgePreset = {
   avatar: {
@@ -83,10 +93,7 @@ export default defineConfig({
     },
   ],
   onSponsorsFetched: (sponsors: Sponsorship[]) => {
-    sponsors = [...sponsors]
-    sponsors.push(SPONSORSHIP_APP_SCREENS)
-    sponsors.push(SPONSORSHIP_NFC21)
-    sponsors.push(SPONSORSHIP_ERIK_GEERS)
+    sponsors = [...sponsors, ...OC_SPONSORSHIPS]
     return sponsors
   }
 })

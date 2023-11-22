@@ -9,6 +9,7 @@ const OC_SPONSORSHIPS: Sponsorship[] = [
       name: 'AppScreens',
       type: 'Organization',
       websiteUrl: 'https://appscreens.com/?_locale=en&utm_source=github&utm_medium=referral&utm_campaign=capawesome&gclid=capawesome',
+      linkUrl: 'https://opencollective.com/appscreens',
     },
     isOneTime: false,
   },
@@ -19,6 +20,8 @@ const OC_SPONSORSHIPS: Sponsorship[] = [
       login: 'nfc21',
       name: 'NFC 21',
       type: 'Organization',
+      websiteUrl: 'https://nfc21.de/',
+      linkUrl: 'https://opencollective.com/nfc21',
     },
     isOneTime: false
   },
@@ -29,6 +32,7 @@ const OC_SPONSORSHIPS: Sponsorship[] = [
       login: 'erikgeers',
       name: 'Erik Geers',
       type: 'User',
+      linkUrl: 'https://opencollective.com/erik-geers',
     },
     isOneTime: false
   },
@@ -39,6 +43,7 @@ const OC_SPONSORSHIPS: Sponsorship[] = [
       login: 'colorful-casting',
       name: 'Colorful Casting',
       type: 'Organization',
+      linkUrl: 'https://opencollective.com/colorful-casting',
     },
     isOneTime: false
   }

@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "sponsorkit": "npx sponsorkit --dir=images/sponsors -w=800"
+  },
+  "devDependencies": {
+    "sponsorkit": "^0.8.9"
+  }
+}

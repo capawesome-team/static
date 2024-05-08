@@ -3,6 +3,6 @@
     "sponsorkit": "npx sponsorkit --dir=images/sponsors -w=800"
   },
   "devDependencies": {
-    "sponsorkit": "^0.9.0"
+    "sponsorkit": "^0.13.1"
   }
 }

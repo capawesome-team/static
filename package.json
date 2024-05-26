@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "scripts": {
     "sponsorkit": "npx sponsorkit --dir=images/sponsors -w=800"
   },

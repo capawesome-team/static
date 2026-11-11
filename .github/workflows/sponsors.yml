@@ -19,11 +19,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3.7.0
         with:
           fetch-depth: 0
       - name: Set up Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3.9.1
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: Install dependencies
@@ -39,7 +39,7 @@ jobs:
           SPONSORKIT_POLAR_TOKEN: ${{ secrets.SPONSORKIT_POLAR_TOKEN }}
           SPONSORKIT_POLAR_ORGANIZATION: ${{ secrets.SPONSORKIT_POLAR_ORGANIZATION }}
       - name: Commit files
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
         with:
           author_name: 'github-actions[bot]'
           author_email: '41898282+github-actions[bot]@users.noreply.github.com'
